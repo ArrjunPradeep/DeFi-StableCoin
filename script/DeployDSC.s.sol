@@ -8,7 +8,6 @@ import {DSCEngine} from "../src/DSCEngine.sol";
 import {HelperConfig} from "./HelperConfig.s.sol";
 
 contract DeployDSC is Script {
-
     address[] public tokenAddresses;
     address[] public priceFeedAddresses;
 
@@ -27,6 +26,6 @@ contract DeployDSC is Script {
 
         dsc.transferOwnership(address(engine));
         vm.stopBroadcast();
-        return (dsc, engine, config); 
+        return (dsc, engine, config);
     }
 }
